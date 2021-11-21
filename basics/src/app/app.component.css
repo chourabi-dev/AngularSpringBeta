@@ -1,0 +1,26 @@
+.new-employee{
+    color: green;
+}
+.old-employee{
+    color: orange;
+}
+
+
+.feild{
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+    position: relative;
+}
+
+.feild > .ball{
+    color: white;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+
+    top: 50px;
+    left: 190px;
+}

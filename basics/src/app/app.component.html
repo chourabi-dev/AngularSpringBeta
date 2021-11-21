@@ -1,0 +1,61 @@
+<!--<h1>{{ title  }}</h1>
+
+<h3>year :  {{year}}</h3>
+
+<h6> {{isNew}} </h6>-->
+
+
+<!--
+<ul>
+    <li *ngFor=" let e of employees " > 
+        <!--<h1 style="color: red;"   *ngIf=" e.year< 2019 "  >{{e.fullname}} </h1>
+        <h1 style="color: green;" *ngIf=" e.year>= 2019 "  >{{e.fullname}} </h1> 
+
+        <h1 [ngClass]=" e.year < 2019 ? 'old-employee' : 'new-employee'  " >{{e.fullname}} </h1>
+
+        
+        
+        <p>
+            <small> {{ e.email }} / {{ e.address }} </small>
+        </p>
+    </li>
+    
+</ul>-->
+
+
+<!--************************************************************************************-->
+<!--
+<p [innerHTML]="message" ></p>
+
+<img width="250px" [src]="src" alt="">-->
+<!--
+<p>
+    today :  {{  today | date:'medium' }}
+</p>
+
+
+<p>
+    amount : {{ 8560 |currency:'TND' }}
+</p>
+
+<P>
+    number of ci : {{ 12000000000 | number }}
+</P>
+
+
+<p>
+    upper case {{  'hello world' | uppercase   }}
+</p>
+
+<p>
+    check email : {{ 'tchourabi@gmail.com' | email  }}
+</p>-->
+
+
+<!--<button (click)="clickMe()" >{{ nbrClicks ==0 ? 'click me' : nbrClicks+' clicks '  }} </button>-->
+
+
+
+<div class="feild" (mousemove)="mouseIsMoving($event)" >
+    <div class="ball"  [style.left]=" x "  [style.top]=" y "  ></div>
+</div>
