@@ -55,7 +55,22 @@
 <!--<button (click)="clickMe()" >{{ nbrClicks ==0 ? 'click me' : nbrClicks+' clicks '  }} </button>-->
 
 
-
+<!--
 <div class="feild" (mousemove)="mouseIsMoving($event)" >
     <div class="ball"  [style.left]=" x "  [style.top]=" y "  ></div>
-</div>
+</div>-->
+
+
+<ul>
+    <li *ngFor="let m of messages" >
+        <p>
+            {{m.username}} : {{m.message}} <br>
+
+            <small>{{ m.date | date }}</small>
+        </p>
+    </li>
+</ul>
+
+
+<input type="text" (keyup)="isTyping($event)" >
+<p *ngIf="isTypingMessage" >typing...</p>
