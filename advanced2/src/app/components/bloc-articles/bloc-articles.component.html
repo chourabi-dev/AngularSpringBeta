@@ -1,0 +1,13 @@
+<h3>List des articles : </h3>
+
+<hr>
+
+
+<app-article-card     
+*ngFor="let a of articles" 
+[didLike]="a.didLike"   
+[nbrLikes]="a.nbrLikes" 
+[content]="a.content"   
+[title]="a.title"
+[didUpdate]="articleDidUpdate"
+></app-article-card>

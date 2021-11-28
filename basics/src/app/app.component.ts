@@ -100,18 +100,36 @@ export class AppComponent implements OnInit {
     /************************************************************************** */
 
     messages:any[] = []; 
+
+
+
     isTypingMessage = false; 
+
+
+
     isTyping(e:any){ 
       const code = e.code; 
+
       if (code == 'Enter') {
+
+
         this.isTypingMessage = false;
+
+
         const msg = {
           message : e.target.value,
           date: new Date(),
           username: 'taher'
         } 
+
+
         this.messages.push(msg); 
+
+
+        
         e.target.value=''; 
+
+
       }else{
         this.isTypingMessage = true;
       } 

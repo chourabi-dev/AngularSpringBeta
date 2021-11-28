@@ -1,0 +1,11 @@
+<div class="card mb-3">
+    <div class="card-body">
+        <p>
+            <strong>{{title}}</strong>
+        </p>
+        <p>
+           {{content}}
+        </p>
+        <button (click)="socialBtnInteract()" class=" btn btn-outline-primary">{{nbrLikes}} {{ didLike == true  ? 'dislike':'like' }}</button>
+    </div>
+</div>
