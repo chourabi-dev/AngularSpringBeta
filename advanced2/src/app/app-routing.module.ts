@@ -5,6 +5,8 @@ import { AboutInfoTwoComponent } from './components/about-info-two/about-info-tw
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ArticlesPageComponent } from './pages/articles-page/articles-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { UserComponent } from './pages/user/user.component';
+import { UsersComponent } from './pages/users/users.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,9 @@ const routes: Routes = [
     { path:'info-two', component:AboutInfoTwoComponent },
     
   ] },
+
+  { path:'users', component:UsersComponent },
+  { path:'user/:username/:id/details', component:UserComponent }
   
   
 ];

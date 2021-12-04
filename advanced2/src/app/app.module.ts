@@ -13,6 +13,8 @@ import { ArticlesPageComponent } from './pages/articles-page/articles-page.compo
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { AboutInfoOneComponent } from './components/about-info-one/about-info-one.component';
 import { AboutInfoTwoComponent } from './components/about-info-two/about-info-two.component';
+import { UserComponent } from './pages/user/user.component';
+import { UsersComponent } from './pages/users/users.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AboutInfoTwoComponent } from './components/about-info-two/about-info-tw
     ArticlesPageComponent,
     AboutPageComponent,
     AboutInfoOneComponent,
-    AboutInfoTwoComponent
+    AboutInfoTwoComponent,
+    UserComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
