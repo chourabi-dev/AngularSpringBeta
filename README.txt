@@ -13,3 +13,7 @@ new module
 new guard
 
 ng g g guard_name
+
+new service
+
+ng g s service_name
