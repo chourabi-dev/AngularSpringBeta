@@ -1,0 +1,48 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Add Depot</h1>
+    <a routerLink="/products" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-arrow-left fa-sm text-white-50"></i> Back</a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="formData" (ngSubmit)="saveData()" >
+
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label for="">Quantity</label>
+                <input type="number" class="form-control" formControlName="quantity">
+            </div>
+            <div class="form-group">
+                <label for="">Price</label>
+                <input type="number" class="form-control" formControlName="price">
+            </div>
+            <div class="form-group">
+                <label for="">Depot</label> 
+                <select class="form-control" formControlName="depot" >
+                    <option value="">please choose a value</option>
+                    <option [value]="d.id" *ngFor="let d of depots">{{d.name}}</option>
+                    
+                </select>
+            </div>
+         
+
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-success" [disabled]="! formData.valid" >Save</button>
+            </div>
+
+            <div class="alert alert-danger" *ngIf="errMSG!= '' ">
+                {{errMSG}}
+            </div>
+            <div class="alert alert-success" *ngIf="succMSG!= '' ">
+                {{succMSG}}
+            </div>
+            
+
+            
+
+        </form>
+    </div>
+</div>

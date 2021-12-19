@@ -1,0 +1,55 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">New order</h1>
+    <a routerLink="/clients" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-arrow-left fa-sm text-white-50"></i> Back</a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="addProductForm" (ngSubmit)="addProduct()" >
+
+            <div class="form-group">
+                <label for="">Products</label>
+                
+                <select class="form-control" formControlName="product" >
+                    <option value="">please choose a product</option>
+                    <option [value]="p.id" *ngFor="let p of products" >{{p.name}}</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Quantity</label>
+                <input type="number" class="form-control" formControlName="quantity">
+            </div> 
+          
+
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-success" [disabled]="!addProductForm.valid ">Save</button>
+            </div> 
+            
+
+            
+
+        </form>
+    </div>
+</div>
+
+<hr>
+
+
+<ul>
+    <li *ngFor="let o of orders">
+        {{ o.product }} /  {{ o.client }} /  {{ o.quantity }}
+    </li>
+</ul>
+
+<hr>
+
+<p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati repudiandae fugiat vel tempora quam repellat delectus, eos eaque dolore iste similique dolorem, reiciendis error aliquid porro praesentium dignissimos minus. Eos?
+</p>
+
+<button (click)="validateOrder()" class="btn btn-warning">Place order</button>
+
+<div class="alert alert-info mt-3" *ngIf=" infoMessage!='' " >
+    {{infoMessage}}
+</div>
